@@ -119,6 +119,41 @@
           }
         }
       }
+    },
+    "yufan": {
+      "projectType": "library",
+      "root": "projects/yufan",
+      "sourceRoot": "projects/yufan/src",
+      "prefix": "zy",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/yufan/tsconfig.lib.json",
+            "project": "projects/yufan/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/yufan/src/test.ts",
+            "tsConfig": "projects/yufan/tsconfig.spec.json",
+            "karmaConfig": "projects/yufan/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/yufan/tsconfig.lib.json",
+              "projects/yufan/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "yufan-packages"
 }
