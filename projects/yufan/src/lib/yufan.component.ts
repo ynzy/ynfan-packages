@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DataService } from "./services/data/data.service";
 @Component({
   selector: 'zy-yufan',
   template: `
@@ -11,9 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class YufanComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService:DataService) { }
 
   ngOnInit() {
+    this.dataService.getData().subscribe(console.log)
   }
 
 }
