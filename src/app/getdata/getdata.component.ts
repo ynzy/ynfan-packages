@@ -10,7 +10,7 @@ export class GetdataComponent implements OnInit {
   constructor(private dataService:DataService) { }
 
   ngOnInit() {
-    this.dataService.getData().subscribe(console.log)
+    // this.dataService.getData().subscribe(console.log)
   }
 
 }

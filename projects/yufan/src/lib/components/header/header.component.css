@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  text-align: center;
+}
+.header-left {
+  width: 10%;
+  background: orangered
+}
+.header-right {
+  width: 20%;
+  background: orangered
+}
+.title {
+  flex: 1
+}

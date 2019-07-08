@@ -1,5 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<zy-yufan></zy-yufan>
-<zy-header></zy-header>
-<app-getdata></app-getdata>
+<!-- <zy-yufan></zy-yufan> -->
+<zy-header #header [title]="title" (right)="handleright($event)" (left)="handleLeft($event)"></zy-header>
+<app-getdata #getdata></app-getdata>
+<button (click)="getsun()">获取子组件所有数据</button>
 <router-outlet></router-outlet>
